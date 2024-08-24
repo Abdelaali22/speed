@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #1d1d1d, #3d3d3d);
+    color: white;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    color: #000000;
+}
+
+header {
+    background-color: #00aaff;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.light-mode header {
+    background-color: #0099cc;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+body.light-mode h1 {
+    text-shadow: 2px 2px 4px #555;
+}
+
+.theme-toggle {
+    margin-right: 20px;
+}
+
+main {
+    padding: 40px;
+}
+
+/* Speed Test Section */
+.speed-test {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+body.light-mode .speed-test {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+button {
+    background: #00aaff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #007acc;
+    transform: scale(1.05);
+}
+
+/* Result Cards */
+.result-card {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+body.light-mode .result-card {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.result-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #00aaff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .result-card h3 {
+    color: #007acc;
+}
+
+.result-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #00aaff, #007acc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background: #222;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Light Mode Footer */
+body.light-mode footer {
+    background: #f0f0f0;
+    color: #000;
+}
+
+/* Animations */
+.result-card {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.result-card.show {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animation-circle {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #00aaff;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: rotate 2s linear infinite, pulse 1s ease-in-out infinite;
+    display: none;
+}
+
+body.light-mode .animation-circle {
+    border: 5px solid #007acc;
+}
+
+/* Chart */
+.chart-container {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* History Table */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#history-table th, #history-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+body.light-mode #history-table th, body.light-mode #history-table td {
+    border-color: #ccc;
+}
+
+#history-table th {
+    background: #00aaff;
+    color: white;
+}
+
+/* Settings Section */
+#settings {
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select, input[type="color"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Recommendations */
+#recommendations {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#recommendations h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #00aaff;
+}

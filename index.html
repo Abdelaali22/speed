@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDELAALI APP - Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>ABDELAALI APP</h1>
+        <button id="toggle-theme" class="theme-toggle">Toggle Theme</button>
+    </header>
+    <main>
+        <div class="speed-test">
+            <button id="start-test">Start Speed Test</button>
+            <div class="animation-circle"></div>
+            <div id="results" class="hidden">
+                <div class="result-card show">
+                    <h3>Download Speed</h3>
+                    <p id="download-speed">0 Mbps</p>
+                </div>
+                <div class="result-card show">
+                    <h3>Upload Speed</h3>
+                    <p id="upload-speed">0 Mbps</p>
+                </div>
+                <div class="result-card show">
+                    <h3>Ping</h3>
+                    <p id="ping">0 ms</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="speedChart"></canvas>
+                </div>
+                <button id="share-results">Share Results</button>
+                <div id="recommendations" class="hidden">
+                    <h3>Recommendations</h3>
+                    <ul id="recommendations-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings">
+            <label for="color-picker">Chart Color:</label>
+            <input type="color" id="color-picker" value="#00aaff">
+            <label for="unit-select">Speed Unit:</label>
+            <select id="unit-select">
+                <option value="Mbps">Mbps</option>
+                <option value="Gbps">Gbps</option>
+            </select>
+            <button id="view-history">View History</button>
+            <button id="export-csv">Export CSV</button>
+            <button id="export-pdf">Export PDF</button>
+        </div>
+
+        <div id="history" class="hidden">
+            <h2>History</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Download Speed</th>
+                        <th>Upload Speed</th>
+                        <th>Ping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- History records will go here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>مصنوع من قبل Abdelaali جميع الحقوق المحفوظة ممنوع التقلييد</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
